@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    
+        <title>signup Page</title>
+		<style type="text/css">
+				body {
+   font-family: Georgia, "Times New Roman", Times, serif;
+   font-size: 14px;
+   color: #333333;
+   font-family: verdana;
+    font-size: 20px;
+	color: blue;
+	text-shadow: 3px 2px white;
+	background-image:url("bg.jpg");
+	background-repeat:no-repeat;
+	background-size:100% 100vh
+}
+
+ 
+a:link {
+   color: #00CC00;
+   
+   font-weight: bold;
+}
+ 
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: gray
+}
+a:hover { color:#33348e; text-decoration: none; }
+
+input#submit1 {
+border:2px groove #7c93ba;
+cursor:pointer; 
+padding: 5px 25px;
+
+background-color:#6b6dbb; 
+background: -webkit-gradient(linear, left top, left bottom, from(#88add7), to(#6b6dbb));
+background: -webkit-linear-gradient(top, #88add7, #6b6dbb);
+background: -moz-linear-gradient(top, #88add7, #6b6dbb);
+background: -o-linear-gradient(top, #88add7, #6b6dbb);
+background: linear-gradient(top, #88add7, #6b6dbb);
+
+font-family:Andika, Arial, sans-serif; 
+color:#fff;
+font-size:1.1em;
+letter-spacing:.1em;
+font-variant:small-caps;
+-webkit-border-radius: 0 15px 15px 0;
+-moz-border-radius: 0 15px 15px 0;
+border-radius: 0 15px 15px 0;
+-webkit-box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+-moz-box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+}
+
+input#submit1:hover, input#submit1:focus {
+color:#edebda;
+-webkit-box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+-moz-box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+}
+input#submit2 {
+border:2px groove #7c93ba;
+cursor:pointer; 
+padding: 5px 25px;
+
+background-color:#6b6dbb; 
+background: -webkit-gradient(linear, left top, left bottom, from(#88add7), to(#6b6dbb));
+background: -webkit-linear-gradient(top, #88add7, #6b6dbb);
+background: -moz-linear-gradient(top, #88add7, #6b6dbb);
+background: -o-linear-gradient(top, #88add7, #6b6dbb);
+background: linear-gradient(top, #88add7, #6b6dbb);
+
+font-family:Andika, Arial, sans-serif; 
+color:#fff;
+font-size:1.1em;
+letter-spacing:.1em;
+font-variant:small-caps;
+-webkit-border-radius: 0 15px 15px 0;
+-moz-border-radius: 0 15px 15px 0;
+border-radius: 0 15px 15px 0;
+-webkit-box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+-moz-box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+}
+
+input#submit2:hover, input#submit2:focus {
+color:#edebda;
+-webkit-box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+-moz-box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+}
+h1{
+      -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  font: normal normal bold 72px/normal "Atomic Age", Helvetica, sans-serif;
+  color: rgb(64, 126, 196);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  text-shadow: 1px 1px 0 rgb(77,162,252) , -1px -1px 0 rgb(77,162,252) , 1px -1px 0 rgb(77,162,252) , -1px 1px 0 rgb(77,162,252) , 4px 4px 8px rgb(44,88,137) , -4px 4px 8px rgb(44,88,137) , 4px -4px 8px rgb(44,88,137) , -4px -4px 8px rgb(44,88,137) ;
+  -webkit-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+
+	h2 {
+    font-weight: bold;
+	font-family: Georgia, "Times New Roman", Times, serif;
+   font-size: 14px;
+   color: #333333;
+	font-family: verdana;
+    font-size: 20px;
+	color: blue;
+	}</style>
+     <script type="text/javascript">
+	 function Reset(){
+		document.getElementById("SignUpForm").reset(); 
+	 }
+	 function checkPassword()
+	{
+		var Password = document.forms["SignUpForm"]["password"].value;
+		// at least one number, one lowercase and one uppercase letter
+		// at least six characters that are letters, numbers or the underscore
+		var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}$/;
+		if(re.test(Password)){
+			return re.test(Password);
+		}
+		else{
+			alert ("Invalid Password: Password should contain at least one number, one lowercase and one uppercase letter");
+			return re.test(Password);
+			Reset();
+		}
+	}
+
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="Css.css">
+	</head>
+    <body> 
+     <div class="">
+      <a href="welcome.html" class="">Homepage</a>
+      <a href="about.html" class="">About</a>
+      <a href="contact.html" class="">Contact</a>
+    </div>
+    <center><h1>SELL-IT-EASY</h1><br><br><br><br><br>
+        <form name="SignUpForm" action="processSignUp.php" onsubmit="return checkPassword()" method="post" id="SignUpForm">
+		<h2>
+         Firstname:<input type="text" name="Fname" required><br><br>
+         Lastname:<input type="text" name="Lname" required><br><br>
+		 Email ID:<input type="email" name="email" required placeholder="Please enter valid E-mail"><br><br>
+		 Username:<input type="text" name="username" required><br><br>
+		 Password:<input id="passwordfield" type="password" name="password" required><br><br> 
+         <input id="submit1" type="submit" value="Sign Up!!">
+		 <input id="submit1" type="button" value="cancel" onclick="Reset()"><h2></center>
+        </form>
+    </body>
+</html>
+		  
+           

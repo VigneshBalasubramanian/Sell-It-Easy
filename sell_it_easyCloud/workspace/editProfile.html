@@ -1,0 +1,160 @@
+
+
+<html>
+	<head>
+		<title>Edit Profile</title>
+		<style type="text/css">
+	body {
+   font-family: Georgia, "Times New Roman", Times, serif;
+   font-size: 14px;
+   color: #333333;
+   font-family: verdana;
+    font-size: 20px;
+	color: blue;
+	text-shadow: 3px 2px white;
+	background-image:url("bg2.jpg");
+	background-repeat:no-repeat;
+	background-size:100% 100vh
+}
+
+ 
+a:link {
+   color: #00CC00;
+   
+   font-weight: bold;
+}
+ 
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: gray
+}
+a:hover { color:#33348e; text-decoration: none; }
+
+input#submit1 {
+border:2px groove #7c93ba;
+cursor:pointer; 
+padding: 5px 25px;
+
+background-color:#6b6dbb; 
+background: -webkit-gradient(linear, left top, left bottom, from(#88add7), to(#6b6dbb));
+background: -webkit-linear-gradient(top, #88add7, #6b6dbb);
+background: -moz-linear-gradient(top, #88add7, #6b6dbb);
+background: -o-linear-gradient(top, #88add7, #6b6dbb);
+background: linear-gradient(top, #88add7, #6b6dbb);
+
+font-family:Andika, Arial, sans-serif; 
+color:#fff;
+font-size:1.1em;
+letter-spacing:.1em;
+font-variant:small-caps;
+-webkit-border-radius: 0 15px 15px 0;
+-moz-border-radius: 0 15px 15px 0;
+border-radius: 0 15px 15px 0;
+-webkit-box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+-moz-box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+}
+
+input#submit1:hover, input#submit1:focus {
+color:#edebda;
+-webkit-box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+-moz-box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+}
+input#submit2 {
+border:2px groove #7c93ba;
+cursor:pointer; 
+padding: 5px 25px;
+
+background-color:#6b6dbb; 
+background: -webkit-gradient(linear, left top, left bottom, from(#88add7), to(#6b6dbb));
+background: -webkit-linear-gradient(top, #88add7, #6b6dbb);
+background: -moz-linear-gradient(top, #88add7, #6b6dbb);
+background: -o-linear-gradient(top, #88add7, #6b6dbb);
+background: linear-gradient(top, #88add7, #6b6dbb);
+
+font-family:Andika, Arial, sans-serif; 
+color:#fff;
+font-size:1.1em;
+letter-spacing:.1em;
+font-variant:small-caps;
+-webkit-border-radius: 0 15px 15px 0;
+-moz-border-radius: 0 15px 15px 0;
+border-radius: 0 15px 15px 0;
+-webkit-box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+-moz-box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+}
+
+input#submit2:hover, input#submit2:focus {
+color:#edebda;
+-webkit-box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+-moz-box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+}
+h2 {
+    display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  border: none;
+  font: normal 48px/normal "Warnes", Helvetica, sans-serif;
+  color: rgba(255,255,255,1);
+  text-decoration: normal;
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  white-space: pre;
+  text-shadow: -1px -1px 0 rgba(255,255,255,0.2) , 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #351431 , 0 0 80px #ff00de , 0 0 100px #ff00de ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+	}
+	h1 {
+    font-weight: bold;
+	font-family: Georgia, "Times New Roman", Times, serif;
+   font-size: 14px;
+   color: #333333;
+	font-family: verdana;
+    font-size: 20px;
+	color: blue;
+	}
+	</style>
+	
+</head>
+	
+	<body>
+		<div>
+		<p> <a href="SignInSucess.php">Home</a><br/><br/><center>
+		<h2> Post an Event </h2>
+		 <form name="form1" method="post" action="editProfile.php">
+			<table border="0">
+            <tr> 
+                <td><h1>First Name</h1></td>
+                <td><input type="text" name="name" value=""></td>
+            </tr>
+            <tr> 
+                <td><h1>Last name</h1></td>
+                <td><input type="text" name="Lname" value="<?php echo $Lname;?>"></td>
+            </tr>
+            <tr> 
+                <td><h1>Middle Name</h1></td>
+                <td><input type="text" name="Mname" value="<?php echo $Mname;?>"></td>
+            </tr>
+			<tr> 
+                <td><h1>E-mail ID:</h1></td>
+                <td><input type="email" name="email" value="<?php echo $Email;?>"></td>
+            </tr>
+            <tr>
+                <td><input id="submit1" type="submit" name="update" value="Update"></td>
+            </tr>
+			</table>
+		</form></center>
+		</p>
+		</div>
+	</body>
+</html>

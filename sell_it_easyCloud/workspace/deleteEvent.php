@@ -1,0 +1,12 @@
+<?php	
+	$servername = "localhost";
+	$username = "root";
+	$password = "pr@sh@nth1@";
+
+	//mysql_connect($servername, $username, $password);
+		require_once("connect.php");
+	mysql_select_db('cs687_teamproject');
+	$id = $_GET['id'];
+	mysql_query("DELETE FROM Event_Details WHERE Event_ID = '$id' ") ;
+	echo '<script>window.location = "SignInSucess.php";</script>';
+?>	
